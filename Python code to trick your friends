@@ -1,0 +1,19 @@
+from tkinter import *
+import random
+import tkinter.messagebox as tmsg
+a=Tk()
+a.geometry('733x533')
+Label(a,text="Are You Dumb?",font=("jokerman",38)).place(x=50,y=10)
+def y():
+    tmsg.showinfo('Yes',"I know that you are dumb😂",command=a.destroy())
+def n():
+    global b
+    b.destroy()
+    xv=random.randint(400,600)
+    yv=random.randint(450,600)
+    b=Button(a,text="No",command=n,)
+    b.place(x=xv,y=yv)
+Button(a,text="Yes",command=y).place(x=200,y=550)
+b=Button(a,text="No",command=n,)
+b.place(x=500,y=550)
+a.mainloop()
